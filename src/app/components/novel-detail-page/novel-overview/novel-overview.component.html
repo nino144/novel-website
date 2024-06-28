@@ -1,0 +1,76 @@
+<div class="novel-container">
+  <div class="novel-image">
+    <img mat-card-image [src]="overview.imageURL" alt="best aya" />
+  </div>
+  <div class="novel-content">
+    <h1 class="novel-title">{{overview.name}}</h1>
+    <h4>{{overview.author}}</h4>
+
+    <div class="novel-action">
+      <div class="novel-action-item">
+          <mat-icon>book</mat-icon> Read
+      </div>
+      <div class="novel-action-item">
+          <mat-icon>bookmark</mat-icon> Book Mark
+      </div>
+      <div class="novel-action-item" (click)="showChaptersList = !showChaptersList">
+        <span class="number">1</span>
+        <mat-icon>list</mat-icon> Content
+      </div>
+      <div class="novel-action-item">
+        <span class="number">{{overview.novelPopularity?.rating}}</span>
+        <mat-icon>rate_review</mat-icon> Rate
+      </div>
+      <div class="novel-action-item">
+        <span class="number">2</span>
+        <mat-icon>forum</mat-icon> Discuss
+      </div>
+  </div>
+
+
+    <div class="novel-stats">
+      <div class="stat-item">
+          <span class="stat-number">{{overview.chapter}}</span>
+          <span class="stat-label">Chapters</span>
+      </div>
+      <div class="stat-item">
+          <span class="stat-number">{{overview.novelPopularity?.views}}</span>
+          <span class="stat-label">Views</span>
+      </div>
+      <div class="stat-item">
+          <span class="stat-number">{{overview.novelPopularity?.nominates}}</span>
+          <span class="stat-label">Nominates</span>
+      </div>
+      <div class="stat-item">
+          <span class="stat-number">{{overview.novelPopularity?.stores}}</span>
+          <span class="stat-label">Stores</span>
+      </div>
+    </div>
+
+    <div class=genre-container>
+      <div class="genre-item">
+        {{ overview.novelTraits?.wordContext }}
+      </div>
+      <div class="genre-item">
+        {{ overview.novelTraits?.vision }}
+      </div>
+      <div class="genre-item">
+        {{ overview.novelTraits?.status }}
+      </div>
+      <div class="genre-item">
+        {{ overview.category }}
+      </div>
+      <div class="genre-item">
+        {{ overview.novelTraits?.characterTrait }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="chapter-list-overlay" *ngIf="showChaptersList"></div>
+
+<div class="chapter-list" *ngIf="showChaptersList" (click)="showChaptersList = !showChaptersList">
+  <app-chapter-list></app-chapter-list>
+</div>
+  
+

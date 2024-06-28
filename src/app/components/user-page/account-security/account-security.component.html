@@ -1,0 +1,38 @@
+<div class="split-container">
+  <div class="form-container">
+    <form>
+      <mat-form-field>
+        <mat-label>Old Password</mat-label>
+        <input matInput placeholder="Old password" [(ngModel)]="userInfo.password" name="password">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>New Password</mat-label>
+        <input matInput placeholder="New Password" [(ngModel)]="newPassword" name="newPassword">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirm New Password</mat-label>
+        <input matInput placeholder="Confirm New Password" [(ngModel)]="confirmNewPassword" name="confirmNewPassword">
+      </mat-form-field>
+
+      <button class="update-btn" (click)="submitForm1()">Update Password</button>
+    </form>
+  </div>
+
+  <div class="form-container">
+    <form>
+      <mat-form-field>
+        <mat-label>Old Password</mat-label>
+        <input matInput placeholder="Old Password" [(ngModel)]="userInfo.password" name="password">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>New Email</mat-label>
+        <input matInput placeholder="New Email" [(ngModel)]="newEmail" name="newEmail">
+      </mat-form-field>
+
+      <button  class="update-btn" (click)="submitForm2()">Update Email</button>
+    </form>
+  </div>
+</div>

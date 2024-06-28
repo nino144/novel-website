@@ -1,0 +1,18 @@
+<mat-card class="novel-item" [routerLink]="['/novel-detail']">
+  <div class="novel-content">
+    <img mat-card-image [src]="item.imageURL" alt="best aya" />
+    <div class="text-content" [style.width]="customWidth"> 
+      <p class="truncate">{{item.name}}</p>
+      <div class="description-container">
+        <p class="truncate-specifig">{{item.description}}</p>
+      </div>
+      <div [ngStyle]="customFlex">
+        <div class="flex-container"> 
+          <p class="truncate">{{item.author}}</p>
+          <p class="truncate genre-item" [routerLink]="['/search']">{{item.category}}</p>
+        </div>
+        <p class="truncate">Chapter: {{item.chapter}}</p>
+      </div>
+    </div>
+  </div>
+</mat-card>

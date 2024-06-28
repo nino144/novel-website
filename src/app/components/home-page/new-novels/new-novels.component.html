@@ -1,0 +1,29 @@
+<div class="new-novel-container">
+  <h1> Đọc Ngay </h1>
+  <div class="new-novel-content">
+    <div class="picture-content">
+      <div class="arrow-container arrow-left" (click)="changeContent('prev')">
+        <div class="arrow">&lt;</div>
+      </div>
+      <div class="image-wrapper">
+        <img [src]="slides[previousIndex].imageURL" class="tilted-img">
+        <img [src]="currentSlide.imageURL">
+        <img [src]="slides[nextIndex].imageURL" class="tilted-img">
+      </div>
+      <div class="arrow-container arrow-right" (click)="changeContent('next')">
+        <div class="arrow">&gt;</div>
+      </div>
+    </div>
+    <div class="text-content">
+      <p class="truncate">{{currentSlide.name}}</p>
+      <div class="novel-description">
+        <p class="truncate-specifig">{{currentSlide.description}}</p>
+      </div>
+      <div class="novel-info">
+        <p style="width:29%;" class="truncate">{{currentSlide.author}}</p>
+        <p style="width:29%;" class="truncate">{{currentSlide.category}}</p>
+      </div>
+    </div>
+    <button class="read-now-button"  [routerLink]="['/search']">Đọc ngay</button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="title title-2">
+  <p>New chapter</p>
+  <p>Read all</p>
+</div>
+
+<div class="new-chapters-container">
+  <div *ngFor="let chapter of chapters" class="chapter" [routerLink]="['/chapter']">
+    <div>Chương {{chapter.chapter}} :{{ chapter.title }}</div>
+    <div>{{ chapter.time }}</div>
+  </div>
+</div>

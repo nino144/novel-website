@@ -1,0 +1,59 @@
+<div class="content-container">
+  <h2>Read Setting</h2>
+
+  <div class="flex-content">
+    <p>Font Color</p>
+    <select [(ngModel)]="settings.value.selectedColor" [style.background]="settings.value.selectedColor" (ngModelChange)="updateSetting('selectedColor', $event)">
+      <option [value]="color" class="color-box" *ngFor="let color of settings.value.colors" [style.background]="color" (click)="selectColor(color)"></option>
+    </select>
+  </div>
+
+  <div class="flex-content">
+    <p>Background Color</p>
+    <select [(ngModel)]="settings.value.selectedBackgroundColor" [style.background]="settings.value.selectedBackgroundColor" (ngModelChange)="updateSetting('selectedBackgroundColor', $event)">
+      <option [value]="color" class="color-box" *ngFor="let color of settings.value.colors" [style.background]="color" (click)="selectBackgroundColor(color)"></option>
+    </select>
+  </div>
+
+
+  <div class="flex-content">
+    <p>Font Type</p>
+    <select [(ngModel)]="settings.value.selectedFont" (ngModelChange)="updateSetting('selectedFont', $event)">
+      <option value="Avenir Next">Avenir Next</option>
+      <option value="Bookerly">Bookerly</option>
+      <option value="Segoe UI">Segoe UI</option>
+    </select>
+  </div>
+
+  <div class="flex-content">
+    <p>Font Size</p>
+    <select [(ngModel)]="settings.value.selectedFontSize" (ngModelChange)="updateSetting('selectedFontSize', $event)">
+      <option value="12px">12px</option>
+      <option value="13px">13px</option>
+      <option value="14px">14px</option>
+    </select>
+  </div>
+
+  <div class="flex-content">
+    <p>Line Height</p>
+    <select [(ngModel)]="settings.value.selectedLineHeight" (ngModelChange)="updateSetting('selectedLineHeight', $event)">
+      <option value="100%">100%</option>
+      <option value="110%">110%</option>
+      <option value="120%">120%</option>
+    </select>
+  </div>
+
+  <div class="flex-content">
+    <p>Align</p>
+    <select [(ngModel)]="settings.value.selectedAlign" (ngModelChange)="updateSetting('selectedAlign', $event)">
+      <option value="left">Left</option>
+      <option value="right">Right</option>
+      <option value="center">Center</option>
+      <option value="justify">Justify</option>
+    </select>
+  </div>
+
+  <button>Default</button>
+</div>
+
+

@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>My Novels List</h2>
+  <div class="new-novel-btn" [routerLink]="['/uploaded-novel/upload-new-novel']">New Novel</div>
+  <app-uploaded-novels></app-uploaded-novels>
+  <app-paginator [Pages]="13" [currentPage]="8" [size]="5"></app-paginator>
+</div>

@@ -1,0 +1,32 @@
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Adjust as needed */
+}
+
+.item {
+  transition: background-color 0.3s ease;
+}
+
+.mat-mdc-menu-item:hover {
+  background-color: pink; /* Replace with your desired color */
+  color: white;
+}
+
+.slide-toggle {
+  display: none;
+}
+
+@media (max-width: 1000px) { 
+  .slide-toggle {
+    display: flex;
+  }
+}

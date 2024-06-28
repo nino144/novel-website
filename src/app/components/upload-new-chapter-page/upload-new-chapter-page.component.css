@@ -1,0 +1,56 @@
+.container {
+  padding: 10px;
+  background-color: #f5f5f5; /* Very light grey */
+}
+
+form {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-input-element {
+  background-color: white; /* White input fields */
+}
+
+.custom-input-background {
+  background-color: #ffffe0; /* Very light yellow */
+}
+
+textarea {
+  height: 290px !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  border-bottom-color: lightsalmon !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+  border-bottom-color: lightsalmon !important;
+}
+
+.submit-btn {
+  padding: 10px;
+  width: 10%;
+  background-color: #FFBF00;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2em;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  border: 2px solid #FFBF00;
+}
+

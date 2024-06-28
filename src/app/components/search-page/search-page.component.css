@@ -1,0 +1,42 @@
+.search-page-container {
+  display: flex;
+  margin: 5px;
+  margin-left: 0px;
+  position: relative;
+}
+
+.story-container {
+  flex-grow: 1;
+}
+
+.genre-container {
+  width: 35%;
+}
+
+/* Media query for screens less than 1000px */
+@media (max-width: 1000px) {
+  .genre-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform ease; /* Smooth transition */
+  }
+
+  .story-container {
+    width: 100%; /* Take up full width when screen width is less than 1000px */
+    visibility: visible; /* Initially hidden */
+  }
+
+  .genre-container.show {
+    transform: translateX(0); /* Slide back to original position */
+    width: 100%;
+    z-index: 1;
+  }
+
+  .genre-container.show + .story-container {
+    visibility: hidden; /* Show when genre container is expanded */
+  }
+
+}

@@ -1,0 +1,5 @@
+<div class="reading-list">
+  <h1>Reading</h1>
+  <app-reading-novel *ngFor="let item of items" [item]="item" (onClose)="removeReadingNovel(item)"></app-reading-novel>
+  <button class="view-all-button">Xem tất cả</button>
+</div>

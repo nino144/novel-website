@@ -1,0 +1,7 @@
+<div class="reading-list">
+  <div class="review-header">
+    <h1>Đánh Giá</h1>
+    <button class="view-all-button">Xem tất cả</button>
+  </div>
+  <app-review-novel *ngFor="let review of reviews" [review]="review"></app-review-novel>
+</div>

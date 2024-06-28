@@ -1,0 +1,10 @@
+<div class="search-page-container">
+  <div class="genre-container" [ngClass]="getContentClass()">
+    <app-genre></app-genre>
+  </div>
+  <div class="story-container">
+    <app-filter></app-filter>
+    <app-novel-search-results></app-novel-search-results>
+    
+    <app-paginator [Pages]="13" [currentPage]="8" [size]="5"></app-paginator>
+  </div>

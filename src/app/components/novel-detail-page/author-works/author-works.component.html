@@ -1,0 +1,13 @@
+<div class="title-2">
+  <p>Same Author {{author}} </p>
+  <p>Read more</p>
+</div>
+
+<div class="works-container">
+  <app-author-works-item 
+    *ngFor="let item of items; let i = index" 
+    [item]="item"
+    [author]="author"
+    [isOdd]="i % 2 !== 0">
+  </app-author-works-item>
+</div>

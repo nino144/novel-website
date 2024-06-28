@@ -1,0 +1,49 @@
+::ng-deep .review-container {
+  margin-bottom: 5px;
+  background-color: rgb(48, 66, 121);
+  padding: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-image {
+  margin-right: 8px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-content {
+  width: 71%;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-content {
+  display: flex;
+}
+
+.story-content {
+  display: flex;
+}
+
+.story-content p:first-child {
+  flex-basis: 80%;
+}
+
+.story-content p:last-child {
+  flex-basis: 20%;
+}
+
+.description {
+  padding: 10px;
+}
+
+

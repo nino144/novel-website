@@ -1,0 +1,83 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 0 ;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view-all-button {
+  border: none;
+  color: #FFD700; /* gold */
+  background-color: transparent;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.view-all-button:hover {
+  color: #B8860B; /* darkgoldenrod */
+}
+
+.view-all-button:active {
+  color: #8B6914; /* darkgoldenrod4 */
+}
+
+.navbar-container {
+  height: fit-content;
+}
+
+.truncate-specifig {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.genre-item {
+  padding: 5px;
+  text-align: center;
+  border: 2px solid palevioletred;
+  border-radius: 10px;
+}
+
+.genre-item:hover , .genre-item:active {
+  background-color: whitesmoke;
+}
+
+.title-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(255, 191, 0, 0.5);
+  align-items: center;
+  padding: 11px;
+  margin-bottom: 10px;
+}
+
+.title-2 p {
+  margin: 0;
+}
+
+.base-form-element {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: block;
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+
+

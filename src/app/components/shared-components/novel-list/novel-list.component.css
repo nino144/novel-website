@@ -1,0 +1,12 @@
+.grid-container {
+  margin-left: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+::ng-deep  .mat-grid-tile-content {
+  justify-content: flex-start !important; /* adjust as needed */
+}
+
+
+

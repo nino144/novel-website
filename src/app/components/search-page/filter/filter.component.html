@@ -1,0 +1,36 @@
+<div class="search-bar">
+  <p class="slide-toggle" (click)="toggleGenreContainer()"><mat-icon>keyboard_arrow_left</mat-icon></p>
+  <p [matMenuTriggerFor]="updated">Recently updated <mat-icon class="triangle-down">expand_more</mat-icon></p>
+  <mat-menu #updated="matMenu">
+    <button mat-menu-item class="item">Recenly updated</button>
+    <button mat-menu-item class="item">Recently posted</button>
+  </mat-menu>
+
+  <p [matMenuTriggerFor]="readCount">Read count <mat-icon class="triangle-down">expand_more</mat-icon></p>
+  <mat-menu #readCount="matMenu">
+    <button mat-menu-item class="item">Read count [Day]</button>
+    <button mat-menu-item class="item">Read count [Week]</button>
+    <button mat-menu-item class="item">Read count [Month]</button>
+    <button mat-menu-item class="item">Read count [All]</button>
+  </mat-menu>
+
+  <p [matMenuTriggerFor]="rating">Rating <mat-icon class="triangle-down">expand_more</mat-icon></p>
+  <mat-menu #rating="matMenu">
+    <button mat-menu-item class="item">Numbers of Raring</button>
+    <button mat-menu-item class="item">Rating Score</button>
+  </mat-menu>
+
+  <p>Save</p>
+  <p>Favorite</p>
+
+  <p [matMenuTriggerFor]="nominate">Nominate <mat-icon class="triangle-down">expand_more</mat-icon></p>
+  <mat-menu #nominate="matMenu">
+    <button mat-menu-item class="item">Nominate [Day]</button>
+    <button mat-menu-item class="item">Nominate [Week]</button>
+    <button mat-menu-item class="item">Nominate [Month]</button>
+    <button mat-menu-item class="item">Nominate [All]</button>
+  </mat-menu>
+
+  <p>Comment</p>
+  <p>Number of Chapters</p>
+</div>

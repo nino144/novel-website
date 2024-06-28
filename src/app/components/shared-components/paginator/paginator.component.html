@@ -1,0 +1,5 @@
+<div class="paginator">
+  <button [disabled]="currentPage <= 1" (click)="currentPage = currentPage - 1; updatePagination()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+  <button *ngFor="let pageNo of pages" [class.active]="pageNo === currentPage" (click)="currentPage = pageNo; updatePagination()">{{ pageNo }}</button>
+  <button [disabled]="currentPage >= Pages" (click)="currentPage = currentPage + 1; updatePagination()"><mat-icon>keyboard_arrow_right</mat-icon></button>
+</div>

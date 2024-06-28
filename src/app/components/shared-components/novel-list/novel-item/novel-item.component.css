@@ -1,0 +1,64 @@
+:host {
+  display: flex;
+  width:100%;
+  height: 98%;
+}
+
+mat-card {
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep mat-card {
+  height: 100%;
+ width:100%;
+}
+
+.novel-item {
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  width:100%
+}
+
+.novel-content {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.novel-content img {
+  width: 140px;
+  height: 98%;
+
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 60%;
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+.mat-mdc-card {
+  box-shadow: 0 10px 10px -10px rgba(169, 169, 169, 0.5);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+}
+
+.description-container {
+  height: 50px;
+}
+
+.truncate-specifig {
+  -webkit-line-clamp: 2;
+  word-wrap: break-word;
+}
+

@@ -1,0 +1,10 @@
+<!-- update-item.component.html -->
+<div fxLayout="row" fxLayoutGap="16px grid" class="item-container" [ngStyle]="{'background-color': isOdd ? 'rgba(0, 0, 0, 0.1)' : 'white'}"  [routerLink]="['/novel-detail']">  
+  <p fxFlex="10%" class="truncate faded">{{updatedNovels.category}}</p>
+  <p fxFlex="25%" class="truncate semi-bold">{{updatedNovels.name}}</p>
+  <p fxFlex="25%" class="truncate">{{updatedNovels.chapter}}</p>
+  <p fxFlex="15%" class="truncate">{{updatedNovels.author}}</p>
+  <p fxFlex="15%" class="truncate faded">{{updatedNovels.uploader}}</p>
+  <p fxFlex="10%" class="truncate faded">{{updatedNovels.time}}</p>
+</div>
+

@@ -1,0 +1,15 @@
+<mat-card class="review-container">
+  <div class="content">
+    <div class="user-image">
+      <img [src]="review.imageURL" alt="Image">
+    </div>
+    <div class="user-content">
+      <p>{{review.userName}}</p>
+      <div class="story-content">
+        <p>{{review.name}}</p>
+        <p>{{review.point}}</p>
+      </div>
+    </div>
+  </div>
+    <p class="description">{{review.description}}</p>
+</mat-card>

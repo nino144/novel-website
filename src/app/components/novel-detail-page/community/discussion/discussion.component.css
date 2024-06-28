@@ -1,0 +1,68 @@
+.container {
+  margin: 0;
+}
+form {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.form-button {
+  background-color: pink;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #007BFF;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+p, a {
+  display: inline-block;
+  margin: 0;
+}
+
+.discuss-content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.form-button {
+  background-color: pink;
+  transition: background-color 0.3s ease;
+  outline: none;
+  height: 40px;
+  border: 1px solid yellow;
+  border-radius: 10px;
+}
+
+
+
+.form-button:hover {
+  background-color: #007BFF;
+}
+
+.mat-mdc-menu-item:hover {
+  background-color: pink; /* Replace with your desired color */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  margin: auto;
+}

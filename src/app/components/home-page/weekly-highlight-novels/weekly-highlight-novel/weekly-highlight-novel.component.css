@@ -1,0 +1,75 @@
+.novel-item {
+  position: relative;
+  font-family: Arial, sans-serif; /* Change as needed */
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 0.95em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.novel-item.first-item {
+  font-weight: 500; /* Makes the font weight of the first item stronger */
+  height: 120px; /* Adjust this value to increase or decrease the height */
+}
+
+.novel-item::after {
+  content: '';
+  position: absolute;
+  left: 15%; /* adjust this value as needed */
+  bottom: 0;
+  width: 70%; /* adjust this value as needed */
+  height: 1px;
+  background-color: #d3d3d3; /* lighter gray */
+}
+
+.novel-details {
+  margin: 0;
+  font-size: 0.9em; /* Smaller font size for details */
+  color: #666; /* Dark gray color for details */
+  display: flex;
+  flex-direction: column;
+}
+
+.higher-first-item {
+  height: 140px; /* Adjust this value as needed */
+}
+
+img {
+  width: 90%;
+  height: 90%;
+  max-width: 140px;
+  max-height: 140px;
+  /* transform: rotate(20deg); */
+}
+
+mat-icon {
+  font-size: 17px;
+  vertical-align: middle;
+}
+
+.truncate {
+  width: 100%; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.index {
+  width:10%;
+}
+
+.name {
+  width: 70%;
+}
+
+.views {
+  width: 20%;
+}
+
+.top-novel {
+  width: 100%;
+  display: block;
+}
+
+

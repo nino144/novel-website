@@ -1,0 +1,106 @@
+
+.full-width {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFBF00;
+    opacity: 0.8;
+}
+
+.custom-color-pink{
+    color:#FFBF00;
+}
+
+.custom-color-white{
+    color:white;
+}
+
+::ng-deep span.mdc-button__label{
+    color:white;
+}
+
+.big-icon{
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px; 
+    grid-template-columns: repeat(5, minmax(100px, 1fr)); /* Adjust this value as needed */
+}
+
+::ng-deep .mat-mdc-menu-panel{
+    max-width: fit-content !important;
+}
+
+.dash-icon {
+  color: white;
+  font-size: 25px;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.1em;
+}
+
+.search-input-container {
+  height: 35px;  /* Or whatever height you want */
+  display: flex;
+}
+
+.input-field {
+  border: none;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 2px;
+  padding-left: 10px;
+  border-left: 2px solid yellow;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+  border-right: white;
+  height: auto;
+}
+
+.search-button {
+  height: auto;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 2px;
+  box-sizing: content-box;
+  background-color: white;
+  border-bottom: 2px solid yellow;
+  border-top: 2px solid yellow;
+  border-right: 2px solid yellow;
+  border-left: white;
+}
+
+.search-input-container:hover .input-field{
+  border-left: 2px solid orange;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  border-right: white;
+}
+
+.search-input-container:hover .search-button{
+  border-right: 2px solid orange;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  border-left: white;
+}
+
+.input-field:focus, .search-button:focus {
+  outline: none; /* Remove the default browser outline */
+}
+
+
+.mat-mdc-button>.mat-icon {
+  color:white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

@@ -1,0 +1,75 @@
+<div class="container">
+  <h2>Novel/Dune</h2>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Novel Name</mat-label>
+      <input matInput placeholder="Enter novel name" [(ngModel)]="novelName" name="novelName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Author/Pen Name</mat-label>
+      <input matInput placeholder="Enter author/pen name" [(ngModel)]="author" name="author">
+    </mat-form-field>
+
+    <!-- Radio Group -->
+    <mat-radio-group [(ngModel)]="selectedOption" name="selectedOption">
+      <mat-radio-button value="compose">Compose</mat-radio-button>
+      <mat-radio-button value="repost">Repost</mat-radio-button>
+    </mat-radio-group>
+
+    <br>
+    <div class="same-line">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose category</mat-label>
+        <mat-select [(ngModel)]="selectedCategory" name="selectedCategory">
+          <mat-option *ngFor="let category of categories" [value]="category">
+            {{ category  }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose world context</mat-label>
+        <mat-select [(ngModel)]="selectedWorldContext" name="selectedWorldContext">
+          <mat-option *ngFor="let worldContext of worldContexts" [value]="worldContext">
+            {{ worldContext  }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="same-line">
+        <mat-form-field appearance="fill">
+        <mat-label>Choose character trait</mat-label>
+        <mat-select [(ngModel)]="selectedTrait" name="selectedTrait">
+          <mat-option *ngFor="let trait of traits" [value]="trait">
+            {{ trait  }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose novel vision</mat-label>
+        <mat-select [(ngModel)]="selectedVision" name="selectedVision">
+          <mat-option *ngFor="let vision of visions" [value]="vision">
+            {{ vision  }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    
+    <!-- File Input -->
+    <div class="upload-file-container">
+      <input type="file" (change)="onFileSelected($event)" [hidden]="true" #fileInput>
+      <input class="upload-file-input" [disabled]="true" [value]="selectedFileName">
+      <button class="upload-btn" (click)="fileInput.click()">Upload File</button>
+    </div>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Novel Description</mat-label>
+      <textarea matInput placeholder="Enter novel description" [(ngModel)]="novelDescription" name="novelDescription"></textarea>
+    </mat-form-field>
+
+    <button class="submit-btn" (click)="submitForm()">Submit</button>
+  </form>
+</div>

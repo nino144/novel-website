@@ -1,0 +1,18 @@
+<div class="content-container" [style.background]="settings.selectedBackgroundColor">
+  <p
+    [style.color]="settings.selectedColor"
+    [style.font-family]="settings.selectedFont"
+    [style.font-size]="settings.selectedFontSize"
+    [style.line-height]="settings.selectedLineHeight"
+    [style.text-align]="settings.selectedAlign"
+  >
+    {{ chapterContent }}
+  </p>
+</div>
+
+<div class="navigation" [style.background]="settings.selectedBackgroundColor">
+  <button class="nav-button">Previous Chapter</button>
+  <button class="nav-button">Next Chapter</button>
+</div>
+
+<app-discussion></app-discussion>

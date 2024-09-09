@@ -1,0 +1,7 @@
+<div class="grid-container">
+  <mat-grid-list [cols]="cols" rowHeight="174" gutterSize="4px" class="custom-grid">
+    <mat-grid-tile *ngFor="let item of data">
+      <app-novel-item  [item]="item" [customWidth]="customWidth" [customFlex]="customFlex"></app-novel-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

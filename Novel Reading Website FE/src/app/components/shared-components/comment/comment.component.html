@@ -1,0 +1,52 @@
+<mat-card [class.depth-1]="comment.depth >= 1">
+  <div class="comment-info" >
+    <div class="flex-user-info">
+      <img [src]="comment.imageURL" alt="User image" class="img">
+      <mat-card-title>{{ comment.name }}</mat-card-title>
+      <div *ngIf="rating !== undefined" class="rating">{{ comment.rating }}</div>
+    </div>
+    <mat-card-subtitle>{{ comment.time | date:'short' }}</mat-card-subtitle>
+  </div>
+  <mat-card-content>
+    <div class="comment">
+      <p class="comment-content">
+        {{ comment.comment }}
+      </p>
+    </div>
+    <div class="like-answer-count">
+      <div class="flex-container">
+        <div class="flex-content-count">
+          <mat-icon [class.liked]="isLiked" (click)="likeComment()">thumb_up</mat-icon>
+          <span (click)="likeComment()">{{ comment.likeCount }}</span>
+        </div>
+        <div class="flex-content-count">
+          <mat-icon [class.disliked]="isDisliked" (click)="dislikeComment()">thumb_down</mat-icon>
+          <span (click)="dislikeComment()">{{ comment.dislikeCount }}</span>
+        </div>
+        <div class="flex-content-count">
+          <mat-icon (click)="toggleReplies(comment)">comment</mat-icon>
+          <span>{{ comment.answerCount }}</span>
+        </div>
+      </div>
+      <p>Chapter {{ comment.chapterNumber }}: {{ comment.chapterTitle }}</p>
+    </div>
+    
+  </mat-card-content>
+</mat-card>
+
+
+<div class="replies" *ngIf="showReplies">
+  <app-comment *ngFor="let reply of comment.replies" [comment]="reply"></app-comment>
+
+  <form class="reply-form" *ngIf="comment.depth === 0" (ngSubmit)="addReply()">
+    <input class="input-reply" [(ngModel)]="replyInput" name="reply" placeholder="Write a reply..." required>
+    <button class="input-button" type="submit">Send</button>
+  </form>
+  
+  
+</div>
+
+
+
+
+

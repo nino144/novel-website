@@ -1,0 +1,41 @@
+<div class="chapter-setting-container"  [style.background]="settings.selectedBackgroundColor">
+  <h2 class="chapter-title" [routerLink]="['/novel-detail']">{{ chapterOverview?.novelName }}</h2>
+  <p class="chapter-description">{{ chapterOverview?.chapterName }}</p>
+  
+  <div class="navigation">
+    <button class="nav-button">Previous Chapter</button>
+    <button class="nav-button">Next Chapter</button>
+  </div>
+
+  <div class="button-container">
+    <button mat-icon-button  (click)="showSettingTable = !showSettingTable">
+      <mat-icon>settings</mat-icon>
+      Setting
+    </button>
+    <button mat-icon-button (click)="showChaptersList = !showChaptersList">
+      <mat-icon>toc</mat-icon>
+      Content
+    </button>
+    <button mat-icon-button>
+      <mat-icon>star</mat-icon>
+      Mark
+    </button>
+  </div>
+</div>
+
+<div class="chapter-list-overlay" *ngIf="showChaptersList"></div>
+
+<div class="chapter-list" *ngIf="showChaptersList" (click)="showChaptersList = !showChaptersList">
+  <button class="close-btn" (click)="showChaptersList = !showChaptersList">
+    <span>X</span>
+  </button>
+  <app-chapter-list></app-chapter-list>
+</div>
+
+<div class="setting-table" *ngIf="showSettingTable">
+  <button class="close-btn" (click)="showSettingTable = !showSettingTable">
+    <span>X</span>
+  </button>
+    <app-chapter-setting></app-chapter-setting>
+</div>
+  

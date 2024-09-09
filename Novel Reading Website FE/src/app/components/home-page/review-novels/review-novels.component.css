@@ -1,0 +1,13 @@
+.review-header {
+  display: flex;
+}
+
+.review-header h1 {
+  margin: 0;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.view-all-button {
+  margin-left: auto;
+}

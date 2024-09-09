@@ -1,0 +1,133 @@
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.profile-info-container {
+  width: 50%;
+  padding: 10px;
+  text-align: left;
+}
+
+.statistics-container {
+  padding: 10px;
+  background-color: whitesmoke;
+  width: 30%;
+  text-align: left;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  width: 22%;
+  padding: 12px;
+  background-color: #FFBF00;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #7F5F00;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  border-bottom-color: lightsalmon !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+  border-bottom-color: lightsalmon !important;
+}
+
+.text-container {
+  display: flex;
+  justify-content:left;
+  flex-direction: column;
+}
+
+.text-container p {
+  width: 40%;
+  display: inline-block; /* or flex */
+}
+
+.text-container span {
+  width: 60%;
+  display: inline-block; /* or flex */
+}
+
+.text-container mat-divider {
+  border-bottom-color: lightgray;
+  margin: 0 auto; /* Center the divider */
+  width: 94%;
+  text-align: left;
+}
+
+.specifig-line {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+
+.specific-line > p:first-child {
+  flex: 40%;
+}
+
+.specific-line > div {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.specific-line span {
+  flex: 60%;
+  text-align: left;
+}
+
+p {
+  margin: 0;
+  padding: 10px;
+  width: 40%;
+  text-align: left;
+}
+
+.flex-column {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.width-fit-content {
+  width: fit-content !important;
+}
+

@@ -1,0 +1,50 @@
+<mat-toolbar class="full-width">
+  <span class="custom-color-white" [routerLink]="['/']">Scarlett</span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon class="dash-icon">menu</mat-icon>
+    Category
+  </button>
+  
+  <mat-menu #menu="matMenu" class="my-menu">
+      <div class="grid-container">
+          <button mat-menu-item *ngFor="let item of categories" [routerLink]="['/search']">{{ item }}</button>
+        </div>
+  </mat-menu>
+
+  <a mat-button [routerLink]="['/rank']">Ranking Table</a>
+
+  <div class="search-input-container">
+    <input type="text" class="input-field" placeholder="novel name">
+    <button class="search-button">
+      <mat-icon class="custom-color-pink big-icon">search</mat-icon>
+    </button>
+  </div>
+
+  <a mat-button [routerLink]="['/uploaded-novel']" >Upload Novel</a>
+
+  <button mat-button [matMenuTriggerFor]="bellMenu">
+    <mat-icon class="big-icon">notifications</mat-icon>
+  </button>
+
+  <mat-menu #bellMenu="matMenu">
+    <div class="notification-list">
+      <button mat-menu-item *ngFor="let notification of notifications" 
+              [ngClass]="{'active': notification.active}" 
+              (click)="selectNotification(notification)">
+        {{ notification.text }}
+      </button>
+    </div>
+  </mat-menu>
+  
+  <div class="profile" [matMenuTriggerFor]="profileMenu">
+      <img class="profile-img" src="https://static.cdnno.com/poster/kim-dan-la-hang-tinh-nguoi-quan-cai-nay-goi-tu-tien/150.jpg?1694148320" alt="Profile">
+      <button mat-button>Profile</button>
+      <mat-menu #profileMenu="matMenu">
+          <button mat-menu-item [routerLink]="['/user']">Account</button>
+          <button mat-menu-item [routerLink]="['/novel-collection']">Collection</button>
+          <button mat-menu-item [routerLink]="['/uploaded-novel']">Uploaded Novels</button>
+          <button mat-menu-item [routerLink]="['/admin-tools']">Admin Tools</button>
+          <button mat-menu-item>Logout</button>
+      </mat-menu>
+  </div>
+</mat-toolbar>

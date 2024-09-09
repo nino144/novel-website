@@ -1,0 +1,25 @@
+<div class="weekly-hightlight-container">
+  <mat-list>
+    <div class="weekly-hightlights-header">
+      <h2>Weekly top read</h2>
+      <button class="view-all-button" [routerLink]="['/rank']">Xem tất cả</button>
+    </div>
+    <app-weekly-highlight-novel *ngFor="let readNovel of readNovels; let i = index" [novelSummary]="readNovel" [index]="i"></app-weekly-highlight-novel>
+  </mat-list>
+
+  <mat-list>
+    <div class="weekly-hightlights-header">
+      <h2>Weekly top nominated</h2>
+      <button class="view-all-button" [routerLink]="['/rank']">Xem tất cả</button>
+    </div>
+    <app-weekly-highlight-novel *ngFor="let nominatedNovel of nominatedNovels; let i = index" [novelSummary]="nominatedNovel" [index]="i"></app-weekly-highlight-novel>
+  </mat-list>
+
+  <mat-list>
+    <div class="weekly-hightlights-header">
+      <h2>Weekly top discussed</h2>
+      <button class="view-all-button" [routerLink]="['/rank']">Xem tất cả</button>
+    </div>
+    <app-weekly-highlight-novel *ngFor="let discussedNovel of discussedNovels; let i = index" [novelSummary]="discussedNovel" [index]="i"></app-weekly-highlight-novel>
+  </mat-list>
+</div>

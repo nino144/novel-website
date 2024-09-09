@@ -1,0 +1,11 @@
+<a [matMenuTriggerFor]="rankTime" class="rank-time">
+  Xếp hạng: Theo tuần <mat-icon>expand_more</mat-icon>
+</a>
+
+<mat-menu #rankTime="matMenu" xPosition="before">
+  <button mat-menu-item>Theo Ngày</button>
+  <button mat-menu-item>Theo Tuần</button>
+  <button mat-menu-item>Theo Tháng</button>
+</mat-menu>
+
+

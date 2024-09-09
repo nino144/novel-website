@@ -1,0 +1,43 @@
+<div class="container">
+    <form #reviewForm="ngForm" (ngSubmit)="onSubmit(reviewForm)">
+      <p>Rating {{score}}</p>
+      <mat-slider min="1" max="5" step="0.1" [(ngModel)]="score" name="score" ngDefaultControl>
+        <input matSliderThumb [value]="score">
+      </mat-slider>
+      <br/>
+      <input class="hide-input" type="checkbox" [(ngModel)]="hideInputs" name="hideInputs"> Hide inputs
+      <br/>
+      <div *ngIf="!hideInputs">
+        <input type="text" name="character" placeholder="Nhân vật chính như nào? (nhiệt huyết?, vô sỉ?, thông minh? ...)" ngModel class="base-form-element form-input">
+        <br/>
+        <input type="text" name="plot" placeholder="Cốt truyện như nào? (logic?, sảng văn?, bố cục nhiều lớp?, quay xe liên tục? ...)" ngModel class="base-form-element form-input">
+        <br/>
+        <input type="text" name="world" placeholder="Bố cục thế giới như nào? (lớn hay nhỏ?, một thế giới?, nhiều thế giới?, nhiều tầng? ...)" ngModel class="base-form-element form-input">
+        <br/>
+        <textarea name="review" placeholder="Nội dung bài đánh giá (ít nhất 100 từ)..." ngModel class="base-form-element form-textarea"></textarea>
+        <br/>
+      </div>
+      <button type="submit" class="base-form-element form-button">Submit</button>
+    </form>
+
+    <div class="review-show-info">
+      <input type="checkbox" [(ngModel)]="showReviews" name="showReviews"> Show Reviews
+
+      <p> 142 thao luan </p>
+
+      <a [matMenuTriggerFor]="sort" class="sort">
+        Newest <mat-icon>expand_more</mat-icon>
+      </a>
+
+      <mat-menu #sort="matMenu" yPosition="below" class="sort-menu"> 
+        <button mat-menu-item>Newest</button>
+        <button mat-menu-item>Oldest</button>
+        <button mat-menu-item>Like</button>
+      </mat-menu>
+
+    </div>
+
+  <div class="flex-container" *ngIf="showReviews">
+    <app-comment class="flex-item" *ngFor="let comment of comments" [comment]="comment" [rating]="comment.rating"></app-comment>
+  </div>
+</div>

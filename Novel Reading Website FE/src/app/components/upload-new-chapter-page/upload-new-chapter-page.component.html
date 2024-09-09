@@ -1,0 +1,20 @@
+<div class="container">
+<h2>Novel/Dune</h2>
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Số chương</mat-label>
+    <input matInput placeholder="Enter chapter number" [(ngModel)]="chapterNumber" name="chapterNumber">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Tên chương</mat-label>
+    <input matInput placeholder="Enter chapter title" [(ngModel)]="chapterTitle" name="chapterTitle">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nội dung chương</mat-label>
+    <textarea matInput placeholder="Enter chapter content" [(ngModel)]="chapterContent" name="chapterContent"></textarea>
+  </mat-form-field>
+
+  <button class="submit-btn" (click)="submitForm()">Submit</button>
+</form>

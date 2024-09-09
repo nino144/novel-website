@@ -1,0 +1,40 @@
+<mat-list-item [ngClass]="{'first-item': index === 0, 'higher-first-item': index === 0}"  [routerLink]="['/novel-detail']">
+  <div class="novel-item" [ngClass]="{'first-item': index === 0}" *ngIf="index === 0">
+    <span class="index">
+      {{index + 1}}.
+    </span>
+    <div style="width: 65%;">
+      <span class="truncate top-novel">
+        {{novelSummary.name}}
+      </span>
+      <p class="novel-details">
+        <span class="views" style="color:fuchsia;">
+          {{novelSummary.views}}
+          <mat-icon>visibility</mat-icon>
+        </span>
+        <span class="truncate author">
+          <mat-icon>person</mat-icon>
+          {{novelSummary.author}}
+        </span>
+        <span class="truncate type">
+          <mat-icon>book</mat-icon>
+          {{novelSummary.category}}
+        </span>
+      </p>
+    </div>
+    <div style="width: 35%;">
+      <img [src]="novelSummary.imageURL" alt="novel Image">
+    </div>
+  </div>
+  <div class="novel-item" *ngIf="index !== 0">
+    <span class="index">
+      {{index + 1}}.
+    </span>
+    <span class="truncate name"> 
+      {{novelSummary.name}}
+    </span>
+    <span class="truncate views">
+      {{novelSummary.views}}
+    </span>
+  </div>
+</mat-list-item>

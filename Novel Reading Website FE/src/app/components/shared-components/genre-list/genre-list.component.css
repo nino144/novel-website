@@ -1,0 +1,10 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.flex-item {
+  flex: 0 0 auto;
+  margin: 5px;
+}

@@ -1,0 +1,61 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+mat-slider { 
+  width: 90%;
+  margin: 0 auto; 
+  display: block;
+} 
+
+form {
+  width: 90%;
+  margin: auto;
+}
+
+.form-input {
+  height: 35px;
+}
+
+.form-textarea {
+  height: 65px;
+}
+
+.form-button {
+  background-color: pink;
+  transition: background-color 0.3s ease;
+}
+
+.base-form-element:hover,
+.base-form-element:focus {
+  border-color: #007BFF;
+}
+
+.form-button:hover {
+  background-color: #007BFF;
+}
+
+p {
+  padding: 15px;
+  margin: auto;
+}
+
+.hide-input {
+  margin-left: 5%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-show-info{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}

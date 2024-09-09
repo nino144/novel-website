@@ -1,0 +1,30 @@
+.split-container {
+  display: flex;
+}
+
+.form-container {
+  padding: 20px;
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.update-btn {
+  background-color: #FFBF00;
+  border: 0;
+  padding: 10px;
+  font-size: 1.4em;
+  border-radius: 10px;
+  width: 49%;
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+.update-btn:hover {
+  background-color: #7F5F00;
+}

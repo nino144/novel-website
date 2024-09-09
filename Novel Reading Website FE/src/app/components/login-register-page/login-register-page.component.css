@@ -1,0 +1,132 @@
+.login-signup-container {
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: lightyellow;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-signup-container:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-signup-btn {
+  box-shadow: none;
+  border: none;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  background-color: yellow;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  font-size: 1.2em;
+}
+
+.toggle-button span {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.login-mode span.login {
+  transform: translateX(0);
+}
+
+.toggle-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rebeccapurple;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.login-mode:before {
+  transform: translateX(100%);
+}
+
+.toggle-button:active:before {
+  background-color: #17a2b8;
+}
+
+.toggle-button.login-mode:active:before {
+  background-color: #20c997;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  height: 30px;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+  border-color: yellow;
+}
+
+button[type=submit] {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  width: 75%;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button[type=submit]:hover {
+  background-color: #0056b3;
+}
+
+.err {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .toggle-button {
+    width: 100%;
+  }
+}

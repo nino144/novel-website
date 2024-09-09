@@ -1,0 +1,72 @@
+.admin-panel {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.left-panel {
+  width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.left-panel h2 {
+  font-size: 20px;
+  margin-bottom: 10px;  
+  padding-left: 10px;
+}
+
+.option {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  background-color: white;
+  border: none;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.option:hover {
+  background-color: #FFBF00;
+  color: white;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.right-panel h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+}
+
+td.mat-cell {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}

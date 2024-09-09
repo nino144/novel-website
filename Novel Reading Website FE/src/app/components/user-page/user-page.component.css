@@ -1,0 +1,19 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffa3;
+}
+
+p {
+  margin: 0;
+  background-color: #ffffa3;
+  padding: 15px;
+}
+
+.nav-bar p:nth-child(2) {
+  border-right: 2px solid white;
+}
+
+p:hover, .selected {
+  background-color: rgb(241, 184, 13);
+}

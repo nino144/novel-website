@@ -1,0 +1,4 @@
+
+<!-- parent.component.html -->
+<app-ranking-title-item *ngFor="let item of items" [item]="item" [active]="item === activeItem" (click)="setActive(item)"></app-ranking-title-item>
+

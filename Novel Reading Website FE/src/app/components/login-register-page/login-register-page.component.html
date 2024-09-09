@@ -1,0 +1,24 @@
+<div class="login-signup-container">
+  <h2>{{ isLoginMode ? 'Login' : 'Signup' }}</h2>
+  <div class="login-signup-btn">
+    <div class="toggle-button" [ngClass]="{ 'login-mode': isLoginMode }" (click)="toggleMode(!isLoginMode)">
+      <span class="signup">Signup</span>
+      <span class="login">Login</span>
+    </div>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="!isLoginMode">
+      <input type="name" formControlName="name" placeholder="Name">
+      <div class="err" *ngIf="loginForm.get('name')?.touched && getErrorMessage('name')">{{ getErrorMessage('name') }}</div>
+    </div>
+
+    <input type="email" formControlName="email" placeholder="Email">
+    <div class="err" *ngIf="loginForm.get('email')?.touched && getErrorMessage('email')">{{ getErrorMessage('email') }}</div>
+
+    <input type="password" formControlName="password" placeholder="Password">
+    <div class="err" *ngIf="loginForm.get('password')?.touched && getErrorMessage('password')">{{ getErrorMessage('password') }}</div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

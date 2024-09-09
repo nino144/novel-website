@@ -1,0 +1,44 @@
+/* child.component.css */
+.card {
+  height: 50px;
+  box-shadow: none; /* remove box shadow */
+  width: 80%;
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px; /* make icon smaller */
+}
+
+.title {
+  color: #888; /* make text color lighter */
+  font-size: 14px; /* make text smaller */
+}
+
+.card:hover, .card.active {
+  background-color: #FFA500; /* darker shade of yellow, like yellow orange */
+}
+
+.card:hover .title, .card.active .title {
+  color: white; /* text color changes to white when hovered */
+}
+
+
+@media (max-width: 1000px) {
+  .card-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .icon {
+    margin: 0;
+  }
+
+}

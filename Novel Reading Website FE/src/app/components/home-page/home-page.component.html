@@ -1,0 +1,37 @@
+
+<div class="container">
+  <app-nominated-novels></app-nominated-novels>
+  <app-reading-novels></app-reading-novels>
+</div>
+
+
+
+
+<div style="display: flex; align-items: center;">
+  <h1 style="margin-bottom:0px">Mới cập nhật</h1>
+  <button class="view-all-button">Xem tất cả</button>
+</div>
+
+
+
+<div style="margin-bottom:40px;">
+  <app-updated-novels 
+    *ngFor="let item of items; let i = index" 
+    [updatedNovels]="item" 
+    [isOdd]="i % 2 !== 0">
+  </app-updated-novels>
+</div>
+
+<app-weekly-highlight-novels></app-weekly-highlight-novels>
+
+
+<div class="container">
+  <app-highly-discussed-novels></app-highly-discussed-novels>
+  <app-review-novels></app-review-novels>
+</div>
+
+<div class="container">
+  <app-new-novels></app-new-novels>
+  <app-finished-novels></app-finished-novels>
+</div>
+

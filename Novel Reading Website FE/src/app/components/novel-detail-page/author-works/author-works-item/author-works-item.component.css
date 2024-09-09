@@ -1,0 +1,23 @@
+
+.semi-bold{
+  font-weight: 500; /* Adjust this value to change the boldness */
+}
+
+.faded {
+  opacity: 0.6;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center; /* Aligns the content horizontally at the center */
+  align-items: center; /* Aligns the content vertically at the center */
+  margin-right: 11px  !important;
+  margin-left: 11px  !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.item-container p {
+  padding: 8px !important;
+  margin: 0;
+}

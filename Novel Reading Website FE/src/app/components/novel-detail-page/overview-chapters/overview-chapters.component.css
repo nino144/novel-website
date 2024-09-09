@@ -1,0 +1,42 @@
+.new-chapters-container {
+  display: flex;
+  gap: 20px; /* Adjust this value to set the gap between items */
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.new-chapters-container > div {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+  min-width: 0; /* Add this line */
+
+}
+
+.chapter div:first-child {
+  font-size: 1.2em; /* Adjust this value to set the size of the text */
+  color: #ff1492;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0; /* Add this line */
+
+}
+
+.chapter div:last-child {
+  color: grey;
+  font-size: 0.85em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,47 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+}
+
+td.mat-cell {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.active-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 60px;
+  margin-right: 4px;
+}
+
+.inactive-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.active-button:hover,
+.inactive-button:hover {
+  opacity: 0.7;
+}

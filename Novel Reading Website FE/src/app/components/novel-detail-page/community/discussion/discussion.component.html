@@ -1,0 +1,26 @@
+<div class="container" [style.background]="settings.selectedBackgroundColor">
+  <form #dicussionForm="ngForm" (ngSubmit)="onSubmit(dicussionForm)">
+
+    <textarea name="discussion" placeholder="Discusion..." ngModel class="base-form-element form-textarea"></textarea>
+
+    <div class="discuss-content">
+      <a [matMenuTriggerFor]="sort" class="sort">
+        Newest <mat-icon>expand_more</mat-icon>
+      </a>
+
+      <p> 142 thao luan </p>
+
+      <mat-menu #sort="matMenu" yPosition="below" class="sort-menu"> 
+        <button mat-menu-item>Newest</button>
+        <button mat-menu-item>Oldest</button>
+        <button mat-menu-item>Like</button>
+      </mat-menu>
+
+      <button type="submit" class="form-button">Submit</button>
+    </div>
+  </form>
+
+  <div class="flex-container">
+    <app-comment class="flex-item" *ngFor="let comment of comments" [comment]="comment"></app-comment>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+
+.container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+app-nominated-novels, app-highly-discussed-novels, app-finished-novels {
+ width: 65%;
+}
+
+app-reading-novels, app-review-novels, app-new-novels {
+  width: 35%;
+}

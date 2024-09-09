@@ -1,0 +1,37 @@
+mat-list {
+  box-shadow: 0 4px 8px 0 rgba(255, 105, 180, 0.2), 0 6px 20px 0 rgba(255, 105, 180, 0.19);
+  width: 27%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.weekly-hightlight-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust this value to increase or decrease the gap */
+}
+mat-list h2 {
+  margin-left: 5px;
+  color: fuchsia;
+  margin-bottom: 0;
+}
+
+.weekly-hightlights-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .weekly-hightlight-container {
+    flex-direction: column;
+    margin-left: 20px; /* Add left margin */
+    margin-right: 20px; /* Add right margin */
+  }
+  mat-list {
+    width: 100%; /* Adjust as needed */
+   
+  }
+}

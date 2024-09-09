@@ -1,0 +1,80 @@
+<div class="profile-container">
+  <div class="statistics-container">
+    <img [src]="userInfo.imageURL" alt="Profile" (click)="onImageClick()" class="profile-img">  
+
+    <div class="text-container">
+      <p mat-subheader> {{userInfo.name}} </p>
+
+      <div class="specifig-line">
+        <p>Join</p>
+        <span> {{userReadStatistics.joinDate}} </span>
+      </div>
+
+      <mat-divider [inset]="true" color="grey"></mat-divider>
+
+      <div class="specifig-line">
+        <p>ALREADY READ</p>
+        <div class="flex-column">
+            <p class="no-padding width-fit-content"> {{userReadStatistics.storiesRead}} stories</p>
+            <p class="no-padding width-fit-content"> {{userReadStatistics.chaptersRead}} chapters</p>
+          </div>
+        </div>
+      
+      <mat-divider [inset]="true" color="grey"></mat-divider>
+
+      <div class="specifig-line">
+        <p>BOOKMARKED</p> 
+        <span> {{userReadStatistics.bookMarked}} </span>
+      </div>
+
+      <mat-divider [inset]="true" color="grey"></mat-divider>
+
+      <div class="specifig-line">
+        <p>NOMINATED</p> 
+        <span> {{userReadStatistics.nominated}} </span>
+      </div>
+
+      <mat-divider [inset]="true" color="grey"></mat-divider>
+
+      <div class="specifig-line">
+        <p>COMMENTS</p> 
+        <span> {{userReadStatistics.comments}} </span>
+      </div>
+
+      <mat-divider [inset]="true" color="grey"></mat-divider>
+
+      <div class="specifig-line">
+        <p>REVIEWS</p> 
+        <span> {{userReadStatistics.reviews}} </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-info-container">
+    <h2>User Information</h2>
+    <form>
+      <mat-form-field>
+        <mat-label>User name</mat-label>
+        <input matInput placeholder="Username" [(ngModel)]="userInfo.name" name="userName">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" [(ngModel)]="userInfo.email" name="email" readonly>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Date of Birth</mat-label>
+        <input matInput placeholder="Date of Birth" [(ngModel)]="userInfo.dateOfBirth" name="dateOfBirth">
+      </mat-form-field>
+
+      <mat-radio-group [(ngModel)]="userInfo.gender" name="selectedGender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="others">Others</mat-radio-button>
+      </mat-radio-group>
+
+      <button class="btn" type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>

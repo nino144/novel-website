@@ -1,0 +1,26 @@
+:host {
+  width: 90% !important;
+  display: block !important;
+}
+
+h2 {
+  margin-left: 5px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container h2:last-child {
+  color: red;
+  visibility: hidden;
+}
+
+@media (max-width: 1000px) {
+  .flex-container h2:last-child {
+    visibility: visible;
+  }
+}
+
+

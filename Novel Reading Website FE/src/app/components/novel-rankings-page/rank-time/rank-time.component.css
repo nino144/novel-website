@@ -1,0 +1,10 @@
+.rank-time {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.mat-mdc-menu-item:hover {
+  background-color: pink; /* Replace with your desired color */
+  color: white;
+}

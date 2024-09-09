@@ -1,0 +1,5 @@
+<div class="title-specifig">
+  <p [class]="selectedTabClass[0]" (click)="selectedTab = 0; onTabChange()">Review <span class="number">1</span></p>
+  <p [class]="selectedTabClass[1]" (click)="selectedTab = 1; onTabChange()">Discussion <span class="number">1</span></p>
+</div>
+<ng-container #dynamicComponentContainer></ng-container>

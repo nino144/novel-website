@@ -1,0 +1,150 @@
+.novel-container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.novel-image {
+  width: 18%;
+}
+
+.novel-image img {
+  width: 100%;
+  height: 270px;
+}
+
+.novel-content {
+  margin-left: 10px;
+  width: 82%;
+}
+
+
+/* CSS cho thông tin truyện */
+.novel-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+/* CSS cho các thông số đánh giá, thảo luận, lượt đọc, ... */
+.novel-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  width: fit-content;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid grey;
+  padding: 1em;
+  width: 60px;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 1em;
+  color: grey;
+}
+.novel-stats div {
+  flex: 1;
+  text-align: center;
+}
+
+.novel-stats:hover {
+  color: pink;
+}
+
+.novel-stats:hover .stat-item {
+  border-color: pink;
+}
+
+
+.genre-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the items to wrap as needed */
+  gap: 10px; /* Set the gap between items */
+}
+
+.novel-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.novel-action-item {
+  display: flex; /* Add this line */
+  justify-content: space-evenly; /* Add this line */
+  align-items: center; /* Add this line */
+  font-size: 1em;
+  color: #333;
+  border: 1px solid #333;
+  padding: 2px 10px;
+  transition: all 0.3s ease;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.novel-action-item:hover {
+  color: pink;
+  border-color: pink;
+}
+
+mat-icon {
+  color: pink;
+}
+
+.number {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -15px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f00; /* Change this to the color you want */
+  color: #fff; /* Change this to the color you want */
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.8em;
+}
+
+.novel-action-item {
+  position: relative;
+}
+
+.chapter-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 85%;
+  height: 600px;
+  background-color: whitesmoke;
+  overflow-y: auto;
+}
+
+.chapter-list-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.733); /* Adjust opacity as desired */
+  z-index: 999; /* Ensure it's above other content */
+}

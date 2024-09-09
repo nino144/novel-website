@@ -1,0 +1,6 @@
+<div class="nav-bar">
+  <p [class]="selectedTabClass[0]" (click)="selectedTab = 0; onTabChange()">Currently Reading Novels</p>
+  <p [class]="selectedTabClass[1]" (click)="selectedTab = 1; onTabChange()">Marked Novels</p>
+</div>
+  <ng-container #dynamicComponentContainer></ng-container>  
+  <app-paginator [Pages]="13" [currentPage]="8" [size]="5"></app-paginator>

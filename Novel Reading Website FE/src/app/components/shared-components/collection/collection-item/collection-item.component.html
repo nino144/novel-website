@@ -1,0 +1,21 @@
+<mat-card class="container" >
+  <div class="img" [routerLink]="['/novel-detail']">
+    <img [src]="novel.imageURL">
+  </div>
+  <div class="novel-content" [routerLink]="['/novel-detail']">
+    <p>{{novel.novelName}}</p>
+    <p *ngIf="!isMarkedNovels">Current Reading: {{ novel.chapter }}/{{ novel.totalChapter }}</p>
+    <p *ngIf="isMarkedNovels">[{{ novel.chapter }}/{{ novel.totalChapter }}] - Chapter {{ novel.chapter }}: {{ novel.chapterTitle }}</p>
+  </div>
+  <div class="time">{{novel.time}}</div>
+  <div class="action">
+    <div *ngIf="!isMarkedNovels">
+      <mat-icon (click)="novel.isNotify = !novel.isNotify" [ngStyle]="{'color': novel.isNotify ? 'yellow' : null}">notifications</mat-icon>
+    </div>
+    <div>
+      <mat-icon (click)="onClose.emit()">close</mat-icon>
+    </div>
+  </div>
+</mat-card>
+
+

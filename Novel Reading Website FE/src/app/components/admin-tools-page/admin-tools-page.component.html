@@ -1,0 +1,26 @@
+<div class="admin-panel">
+  <div class="left-panel">
+    <h2>Admin panel</h2>
+    <button class="option" (click)="onSelect('users')">Users</button>
+    <button class="option" (click)="onSelect('novels')">Novels</button>
+    <button class="option" (click)="onSelect('genres')">Novel Genres</button>
+  </div>
+  <div class="right-panel">
+    <ng-container *ngIf="currentView === 'users'">
+      <h2>Manage Users</h2>
+      <app-manage-users></app-manage-users>
+    </ng-container>
+
+    <ng-container *ngIf="currentView === 'novels'">
+      <h2>Manage Novels</h2>
+      <app-manage-novels></app-manage-novels>
+    </ng-container>
+
+    <ng-container *ngIf="currentView === 'genres'">
+      <h2>Manage Novel Genres</h2>
+      <app-manage-genres></app-manage-genres>
+    </ng-container>
+
+    <app-paginator [Pages]="13" [currentPage]="8" [size]="5"></app-paginator>
+  </div>
+</div>

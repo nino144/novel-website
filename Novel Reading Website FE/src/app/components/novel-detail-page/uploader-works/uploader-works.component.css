@@ -1,0 +1,10 @@
+.works-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin: 11px;
+}
+
+app-works-item {
+  width: 19%;
+}
